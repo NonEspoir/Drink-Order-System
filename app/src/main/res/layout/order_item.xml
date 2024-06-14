@@ -4,15 +4,41 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:layout_marginHorizontal="15dp">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+        <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="北京邮电大学西土城校区店"
+                android:textSize="16sp"
+                android:layout_marginVertical="10dp"
+                android:textColor="@color/black"/>
+
+        <TextView
+                android:id="@+id/textView_takeAway"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="堂食"
+                android:textSize="16sp"
+                android:layout_marginVertical="10dp"
+                android:textColor="@color/black" />
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="订单编号：20230627203800000"
-        android:textSize="16sp"
-        android:layout_marginVertical="10dp"
+        android:text="订单编号：20240611203800000"
+        android:textSize="14sp"
+
         android:textColor="@color/black"/>
 
     <TextView
@@ -20,35 +46,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="2023年06月27日 20：38" />
+        android:text="2024年06月11日 11:11" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textView_takeAway"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="堂食"
-            android:textSize="16sp"
-            android:layout_marginVertical="10dp"
-            android:textColor="@color/black" />
-        <TextView
+
+
+
+    <TextView
             android:id="@+id/textView_cost"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="总价：￥ 0"
-            android:textSize="16sp"
-            android:layout_marginVertical="10dp"
+            android:text="合计：￥ 10"
+            android:textSize="18sp"
             android:textColor="@color/black"
             android:gravity="right"
-            android:layout_marginRight="5dp"/>
-    </LinearLayout>
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"/>
 
     <View
         android:id="@+id/divider"

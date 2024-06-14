@@ -10,7 +10,7 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:src="@drawable/strawberry_sq" />
+        android:src="@drawable/bayberry_iced_tea_logo" />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -46,7 +46,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1.5"
                 android:text="TextView"
-                android:textColor="@color/green"
+                android:textColor="@color/blue_medium"
                 android:textSize="14sp"/>
             <ImageButton
                 android:id="@+id/button_subtract"
@@ -69,7 +69,7 @@
                 android:id="@+id/button_add"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:background="@drawable/round_add_circle"
+                android:background="@drawable/add_btm"
                 android:layout_gravity="center" />
         </LinearLayout>
     </LinearLayout>

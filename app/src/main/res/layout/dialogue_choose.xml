@@ -19,7 +19,7 @@
                 android:id="@+id/choose_drink_img"
                 android:layout_width="wrap_content"
                 android:layout_height="220dp"
-                android:src="@drawable/avocado" />
+                android:src="@drawable/bayberry_iced_tea" />
 
             <TextView
                 android:id="@+id/choose_drinkName"
@@ -47,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="6dp"
-                android:text="规格（小杯减￥2，大杯加￥2）" />
+                android:text="规格（小杯减2元，大杯加2元）" />
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -255,7 +255,7 @@
             android:id="@+id/button_add"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:background="@drawable/round_add_circle"
+            android:background="@drawable/add_btm"
             android:layout_gravity="center" />
 
         <Button
@@ -264,7 +264,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1.5"
             android:layout_marginLeft="20dp"
+            android:background="@color/blue_light"
             android:text="加入购物车"
+            android:textSize="16dp"
+            android:textColor="@color/white"
             android:layout_gravity="right|center_vertical"/>
 
         <Button
@@ -272,8 +275,10 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:background="@color/gray"
             android:layout_gravity="right|center_vertical"
+
             android:layout_marginLeft="10dp"
-            android:text="退出" />
+            android:text="返回" />
     </LinearLayout>
 </LinearLayout>

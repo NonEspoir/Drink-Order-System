@@ -10,17 +10,19 @@
         android:id="@+id/textView_allCost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="饮料费：￥ 0\n服务费：￥ 0\n总价：￥ 0\n请扫描以下二维码进行支付。"
+        android:text="饮品：￥ 0\n打包：￥ 0\n应付：￥ 0\n请使用微信扫码支付。"
         android:textColor="@color/black"
+        android:textSize="16dp"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"/>
+
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="335dp"
-        app:srcCompat="@drawable/qrcode"
-        android:layout_marginVertical="15dp"/>
+        app:srcCompat="@drawable/zhifu"
+        android:layout_marginVertical="10dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,12 +34,17 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="完成支付" />
+            android:text="完成支付"
+            android:textColor="@color/white"
+            android:background="@color/blue_light"
+            android:layout_marginRight="10dp"/>
         <Button
             android:id="@+id/button_quit"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:textColor="@color/blue_light"
+            android:background="@color/gray_light"
             android:text="取消支付" />
     </LinearLayout>
 

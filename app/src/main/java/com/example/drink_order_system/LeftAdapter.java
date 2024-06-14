@@ -81,9 +81,9 @@ public class LeftAdapter extends RecyclerView.Adapter<LeftAdapter.LeftViewHolder
         {
             tvTitle.setText(target.getTitle());
             if (target.isSelect()){
-                itemView.setBackgroundColor(ContextCompat.getColor(itemView.getContext(), R.color.gray));
-            } else {
                 itemView.setBackgroundColor(ContextCompat.getColor(itemView.getContext(), R.color.white));
+            } else {
+                itemView.setBackgroundColor(ContextCompat.getColor(itemView.getContext(), R.color.gray_light));
             }
         }
     }

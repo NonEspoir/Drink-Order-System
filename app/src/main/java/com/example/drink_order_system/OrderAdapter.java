@@ -97,19 +97,19 @@ public class OrderAdapter extends RecyclerView.Adapter {
         }
 
         void bindBean(final Ordered_drinks bean) {
-            drinkName.setText(bean.get_drink().get_name()+"  #"+(bean.get_drink().get_number()+1));
+            drinkName.setText(bean.get_drink().get_name());
             drinkImg.setImageResource(bean.get_drink().getImageResId());
             if(bean.get_flavor().getSize().equals("中杯"))
             {
-                drinkPrice.setText(String.format("￥ %.0f", (bean.get_drink().get_price())*bean.get_drink_number()));
+                drinkPrice.setText(String.format("￥ %.1f", (bean.get_drink().get_price())*bean.get_drink_number()));
             }
             else if(bean.get_flavor().getSize().equals("小杯"))
             {
-                drinkPrice.setText(String.format("￥ %.0f", (bean.get_drink().get_price()-2)*bean.get_drink_number()));
+                drinkPrice.setText(String.format("￥ %.1f", (bean.get_drink().get_price()-2)*bean.get_drink_number()));
             }
             else
             {
-                drinkPrice.setText(String.format("￥ %.0f", (bean.get_drink().get_price()+2)*bean.get_drink_number()));
+                drinkPrice.setText(String.format("￥ %.1f", (bean.get_drink().get_price()+2)*bean.get_drink_number()));
             }
             drinkIntro.setText(bean.get_flavor().toString());
             drinkNumber.setText(String.valueOf(bean.get_drink_number()));

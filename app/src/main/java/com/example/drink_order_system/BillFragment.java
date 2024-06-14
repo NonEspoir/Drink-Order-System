@@ -23,9 +23,6 @@ import java.util.ArrayList;
  * create an instance of this fragment.
  */
 public class BillFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private String userName;
     private ArrayList<Order> orders = new ArrayList<>();
     private RecyclerView order_listView;

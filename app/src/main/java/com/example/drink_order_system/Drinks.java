@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Drinks {
 	private int number;
-	private String name;
 	private String type;
+	private String name;
 	private float price;
 	private String introduction;
 	private int ImageResId;

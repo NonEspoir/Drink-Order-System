@@ -54,9 +54,9 @@ public class Ordered_drinks{
 		return ordered_array;
 	}
 
-	public static int getDrinkCost()
+	public static float getDrinkCost()
 	{
-		int sum = 0;
+		float sum = 0.0f;
 		for (Ordered_drinks od:ordered_array)
 		{
 			if(od.get_flavor().getSize().equals("中杯"))

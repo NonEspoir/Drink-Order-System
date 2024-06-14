@@ -20,12 +20,11 @@ public class MainActivity extends AppCompatActivity{
 
     public void handlePermission() {
         // 检查是否开启 Manifest.permission.xxx
-        // (xxx 为权限，根据自己需求添加）
         if (ActivityCompat.checkSelfPermission(this,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-            Toast.makeText(this, "Permission has been allowed", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "请求权限成功", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, "ask for permission",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "正在请求权限",Toast.LENGTH_SHORT).show();
             // 请求权限
             ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
         }
@@ -48,11 +47,11 @@ public class MainActivity extends AppCompatActivity{
 
         if(username.equals("")||password.equals(""))
         {
-            Toast.makeText(this, "用户名或密码不能为空 (!_!)", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "用户名或密码不能为空！", Toast.LENGTH_SHORT).show();
         }
         else if(password.length() < 8)
         {
-            Toast.makeText(this, "为安全考虑，密码至少8位(!_!)", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "密码至少8位！", Toast.LENGTH_SHORT).show();
         }
         else if(username.contains("\\")||username.contains("/")||username.contains(":")||username.contains("*")
         || username.contains("?")||username.contains("\"")||username.contains("<")||username.contains(">")
@@ -65,15 +64,13 @@ public class MainActivity extends AppCompatActivity{
             Intent intent;
             if(temp.saveAccount())
             {
-                //System.out.println("success");
-                Toast.makeText(this, "注册成功 (^_^)\n 为您直接登录", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "注册成功！\n 为您直接登录", Toast.LENGTH_SHORT).show();
                 intent = new Intent(MainActivity.this, RootActivity.class);
                 intent.putExtra("userName", username);
                 startActivity(intent);
             }
             else {
-                //System.out.println("fail");
-                Toast.makeText(this, "注册失败 (@_@)\n该用户名已存在，请尝试其他用户名", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "注册失败。\n该用户名已存在，请尝试其他用户名", Toast.LENGTH_SHORT).show();
             }
         }
 
@@ -86,7 +83,7 @@ public class MainActivity extends AppCompatActivity{
         String password = ET_password.getText().toString();
         if(username.equals("")||password.equals(""))
         {
-            Toast.makeText(this, "用户名或密码不能为空(!_!)", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "用户名或密码不能为空！", Toast.LENGTH_SHORT).show();
         }
         else {
             Account temp = new Account(username, password, mContext);
@@ -98,7 +95,7 @@ public class MainActivity extends AppCompatActivity{
                 startActivity(intent);
             } else {
                 //System.out.println("fail");
-                Toast.makeText(this, "登录失败 (@_@)\n用户名或密码错误", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "登录失败。\n用户名或密码错误", Toast.LENGTH_SHORT).show();
             }
         }
     }

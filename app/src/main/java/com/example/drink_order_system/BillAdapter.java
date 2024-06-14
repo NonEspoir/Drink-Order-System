@@ -67,7 +67,7 @@ public class BillAdapter extends RecyclerView.Adapter {
             {
                 TV_takeAway.setText("堂食");
             }
-            TV_cost.setText("总价：￥ "+bean.getCost());
+            TV_cost.setText("合计：￥ "+bean.getCost());
         }
     }
 }

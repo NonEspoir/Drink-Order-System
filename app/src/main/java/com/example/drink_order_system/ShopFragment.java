@@ -30,7 +30,7 @@ public class ShopFragment extends Fragment {
     private CheckBox CB_takeAway;
     private ImageButton BT_delete;
     private Button BT_buy;
-    private int drinkCost;
+    private float drinkCost;
     private float serviceCost;
 
     private AlertDialog buyDialog = null;
@@ -92,7 +92,7 @@ public class ShopFragment extends Fragment {
         {
             serviceCost = 0.2f*Integer.parseInt((String.valueOf(ET_people.getText())));
         }
-        TV_cost.setText(String.format("饮料费：￥ %d \n服务费：￥ %.1f", drinkCost, serviceCost));
+        TV_cost.setText(String.format("饮品：￥ %.1f \n打包：￥ %.1f", drinkCost, serviceCost));
         ET_people.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -119,7 +119,7 @@ public class ShopFragment extends Fragment {
                 {
                     serviceCost = 0.2f*Integer.parseInt((String.valueOf(ET_people.getText())));
                 }
-                TV_cost.setText(String.format("饮料费：￥ %d \n服务费：￥ %.1f", drinkCost, serviceCost));
+                TV_cost.setText(String.format("饮品：￥ %.1f \n打包：￥ %.1f", drinkCost, serviceCost));
             }
         });
 
@@ -149,7 +149,7 @@ public class ShopFragment extends Fragment {
                 {
                     serviceCost = 0.2f*Integer.parseInt((String.valueOf(ET_people.getText())));
                 }
-                TV_cost.setText(String.format("饮料费：￥ %d \n服务费：￥ %.1f", drinkCost, serviceCost));
+                TV_cost.setText(String.format("饮品：￥ %.1f \n打包：￥ %.1f", drinkCost, serviceCost));
             }
         });
 
@@ -234,7 +234,7 @@ public class ShopFragment extends Fragment {
                     if(view_buy!=null) {
                         TextView TV_allCost = view_buy.findViewById(R.id.textView_allCost);
                         {
-                            TV_allCost.setText(String.format("饮料费：￥ %d\n服务费：￥ %.1f\n总价：￥ %.1f\n请扫描以下二维码进行支付。"
+                            TV_allCost.setText(String.format("饮品：￥ %.1f\n打包：￥ %.1f\n应付：￥ %.1f\n请使用微信扫码支付。"
                                     ,drinkCost, serviceCost, drinkCost+serviceCost));
                         }
                     }
@@ -269,7 +269,7 @@ public class ShopFragment extends Fragment {
         {
             serviceCost = 0.2f*Integer.parseInt((String.valueOf(ET_people.getText())));
         }
-        TV_cost.setText(String.format("饮料费：￥ %d \n服务费：￥ %.1f", drinkCost, serviceCost));
+        TV_cost.setText(String.format("饮品：￥ %.1f \n打包：￥ %.1f", drinkCost, serviceCost));
     }
 
     @Override

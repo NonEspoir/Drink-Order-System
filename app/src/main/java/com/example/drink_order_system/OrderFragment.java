@@ -133,7 +133,7 @@ public class OrderFragment extends Fragment {
         initData();
         right_llM = new LinearLayoutManager(this.getActivity());
         right_listView.setLayoutManager(right_llM);
-        Right_adapter rightAdapter = new Right_adapter(inflater, drinks_array);
+        RightAdapter rightAdapter = new RightAdapter(inflater, drinks_array);
         right_listView.setAdapter(rightAdapter);
 
         titles_array.get(0).setSelect(true);
@@ -163,7 +163,7 @@ public class OrderFragment extends Fragment {
             }
         });
 
-        rightAdapter.buttonSetOnClick(new Right_adapter.MyClickListener() {
+        rightAdapter.buttonSetOnClick(new RightAdapter.MyClickListener() {
             @Override
             public void onclick(View v, int position) {
                 chooseDialog.show();
@@ -205,38 +205,43 @@ public class OrderFragment extends Fragment {
     }
 
     private void initData() {
-        drinks_array.add(new Drinks("牧场酸酪牛油果", "\uD83E\uDDE1 灵感上新",
-                23f, "定制牧场奶源酸酪·百分百进口牛油果鲜果·不使用过你，清爽顺滑", R.drawable.avocado_square));
-        drinks_array.add(new Drinks("喜悦黄果茶", 19f, "匠心甄选黄色系水果·当季芒果·鲜制橙丁百香果，真果无香精",
-                R.drawable.yellow_sq));
-        drinks_array.add(new Drinks("东坡荔枝生椰露", 19f, "当季新鲜荔枝果肉·定制生椰乳·每日现制西米，椰椰荔香清甜交融",
-                R.drawable.coco_sq));
-        drinks_array.add(new Drinks("水牛乳·粉黛玫影", "\uD83C\uDF7C 浓郁牛乳茶",
-                15f, "无香精[玫影]玫瑰红茶·优选广西水牛乳调制奶底", R.drawable.pinkmilk_square));
-        drinks_array.add(new Drinks("水牛乳双拼波波",
-                19f, "优选广西牧场水牛乳·水牛乳冻·慢数黑糖波波，口感甜腻不喜慎点", R.drawable.black_sq));
-        drinks_array.add(new Drinks("轻波波牛乳茶",
-                15f, "人气轻波波牛乳灵感延伸·慢熬黑糖波波，口感香醇，真牛乳无奶精", R.drawable.bobo_sq));
-        drinks_array.add(new Drinks("芋泥牛乳满贯", 18f,
-                "芋泥系列大满贯版，5重口感，浓浓芋香，轻盈不腻", R.drawable.yuni_sq));
-        drinks_array.add(new Drinks("烤黑糖波波牛乳茶", 19f, "65分钟慢熬黑糖波波·真牛乳·定制嫣红茶底，口感浓厚不喜慎点",
-                R.drawable.black_sq));
-        drinks_array.add(new Drinks("多肉桃李", "\uD83C\uDF51 时令鲜果",
-                15f, "当季三华李与当季黄油桃，脆、鲜、甜层层递进", R.drawable.peach_square));
-        drinks_array.add(new Drinks("芝芝多肉桃桃", 28f, "优选当季新鲜水蜜桃·新岩岚，岩茶·醇香芝士，不添加香精色素",
-                R.drawable.pinkpeach_sq));
-        drinks_array.add(new Drinks("芝芝多肉青提", 28f, "优选阳光玫瑰青提·鲜果颗颗去皮·无奶精芝士，甜脆香郁。",
-                R.drawable.grape_sq));
+        drinks_array.add(new Drinks("生椰拿铁", "\uD83E\uDD65 经典好椰",
+                13.9f, "3年突破7亿杯，原创YYDS!", R.drawable.fresh_coconut_latte_logo));
+        drinks_array.add(new Drinks("冰吸生椰拿铁",
+                14.9f, "0乳糖|超凉感，嘴巴里面开空调", R.drawable.iced_fresh_coconut_latte_logo));
+        drinks_array.add(new Drinks("轻咖椰子水",
+                16.9f, "0脂| 100%椰子水，含电解质", R.drawable.light_coffee_coconut_water_logo));
+        drinks_array.add(new Drinks("椰青冰萃美式",
+                15.9f, "0脂| 小众宝藏，100%椰子水", R.drawable.coconut_iced_americano_logo));
 
-        drinks_array.add(new Drinks("芝芝莓莓", 28f,
-                "当季新鲜草莓·定制绿妍茶底·无奶精芝士，奶香浓醇，莓香满溢", R.drawable.strawberry_sq));
-        drinks_array.add(new Drinks("大桶鸭屎香柠茶", "\uD83C\uDF31 简单茗茶",
-                18f, "暴打新鲜柠檬·甄选无香精鸭屎香单从茶，超大桶的清爽更解腻", R.drawable.lemond_square));
-        drinks_array.add(new Drinks("芝芝玫影", 13f, "全新[玫影]玫瑰红茶，无香精自然玫瑰香·无奶精芝士，甜醇顺滑",
-                R.drawable.redtea_sq));
-        drinks_array.add(new Drinks("纯绿妍茶后", 8f, "甄选茶园定制绿妍茶底，淡雅芳幽，默认不加糖，0糖0卡轻负担",
-                R.drawable.greentea_sq));
+        drinks_array.add(new Drinks("加浓美式","\u2615 美式家族",
+                12.9f, "浓醇加倍，臻选IIAC金奖配方", R.drawable.extra_strong_americano_logo));
+        drinks_array.add(new Drinks("大理石美式",
+                13.5f, "个性特调|上半口醇厚，下半口清爽", R.drawable.marble_americano_logo));
+        drinks_array.add(new Drinks("橙C美式",
+                14.2f, "斯巴达勇士推荐|0脂真果汁低负担", R.drawable.orange_c_americano_logo));
+        drinks_array.add(new Drinks("橘金气泡美式",
+                14.8f, "0脂低糖低卡|个性特调经典回归", R.drawable.golden_orange_sparkling_americano_logo));
 
+
+        drinks_array.add(new Drinks("丝绒拿铁","\uD83E\uDD64 超爱拿铁",
+                16.0f, "0植脂末|丝滑感提升20.99%", R.drawable.velvet_latte_logo));
+        drinks_array.add(new Drinks("小白梨拿铁",
+                17.5f, "超级0卡糖，清润轻盈", R.drawable.white_pear_latte_logo));
+        drinks_array.add(new Drinks("大话西瓜拿铁",
+                16.5f, "0卡糖低负担，爱你一万年!", R.drawable.watermelon_latte_logo));
+        drinks_array.add(new Drinks("马斯卡彭生酪拿铁",
+                18.0f, "含丹麦芝士，奶味提升24%", R.drawable.mascarpone_cheese_latte_logo));
+
+
+        drinks_array.add(new Drinks("轻咖柠檬茶","\uD83C\uDF51 饭后茶憩",
+                15.8f, "0脂真果汁低负担，添加生豆咖啡液", R.drawable.light_coffee_lemon_tea_logo));
+        drinks_array.add(new Drinks("冰镇杨梅瑞纳冰",
+                14.5f, "清爽爆款|含10颗东魁杨梅", R.drawable.iced_bayberry_slush_logo));
+        drinks_array.add(new Drinks("加柚瑞纳冰",
+                14.0f, "柚子轻酪风味，今天加“柚“不加班", R.drawable.grapefruit_slush_logo));
+        drinks_array.add(new Drinks("杨梅冰茶",
+                13.5f, "0咖啡真果汁低负担，时令东魁杨梅", R.drawable.bayberry_iced_tea_logo));
 
         for (int i = 0; i < drinks_array.size(); i++) {
             Drinks temp = drinks_array.get(i);
